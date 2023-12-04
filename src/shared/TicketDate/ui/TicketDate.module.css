@@ -1,0 +1,12 @@
+
+.date{
+    @apply flex flex-col gap-3;
+}
+
+.day{
+    @apply font-light text-gray-400;
+}
+
+.time{
+    @apply text-4xl font-bold;
+}
