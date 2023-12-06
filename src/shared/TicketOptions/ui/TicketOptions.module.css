@@ -1,0 +1,11 @@
+.info{
+    @apply flex flex-row justify-between mt-6;
+}
+
+.other{
+    @apply flex flex-row gap-3;
+}
+
+.button{
+    @apply cursor-pointer;
+}

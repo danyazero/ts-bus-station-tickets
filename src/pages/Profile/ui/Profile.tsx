@@ -12,7 +12,7 @@ export const Profile = () => {
 
     return (
         <>
-            {tickets.map((element, index) => <Ticket key={element.id + "_" + index} id={element.id} flight_number={element.flight_number} seat={element.seat} bag_weight={element.bag_weight} full_name={element.full_name} email={element.email} dispatch_city={element.dispatch_city} arrival_city={element.arrival_city} bus_class={element.bus_class} dispatch_date={element.dispatch_date} arrival_date={element.arrival_date}/>)}
+            {tickets.map((element, index) => <Ticket key={element.id + "_" + index} {...element}/>)}
         </>
     );
 }

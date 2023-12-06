@@ -1,0 +1,15 @@
+
+.header{
+    @apply flex flex-row justify-between items-center;
+}
+
+.head_text {
+    @apply flex flex-row gap-1.5 font-light text-gray-400;
+}
+.flight_number{
+
+}
+
+.bus_class{
+    @apply bg-blue-900 rounded-2xl text-white h-fit px-4 py-1;
+}

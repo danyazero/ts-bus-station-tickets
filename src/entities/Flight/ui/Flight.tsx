@@ -1,11 +1,10 @@
-import {ITicket} from "./../models/interfaces.ts"
-import st from "./Ticket.module.css"
+import {IFlight} from "./../models/interfaces.ts"
+import st from "./Flight.module.css"
 import {TicketDate} from "../../../shared/TicketDate";
 import {FlightDuration} from "../../../shared/FlightDuration";
-import {TicketOptions} from "../../../shared/TicketOptions";
 import {TicketHeader} from "../../../shared/TicketHeader";
 
-export const Ticket = (props: ITicket) => {
+export const Flight = (props: IFlight) => {
 
     return (
         <div className={st.ticket}>
@@ -14,11 +13,9 @@ export const Ticket = (props: ITicket) => {
 
             <div className={st.schedule}>
                 <TicketDate date={props.dispatch_date}/>
-                <FlightDuration dispatch={props.dispatch_date} arrive={props.arrival_date} seat={"P"+props.seat}/>
+                <FlightDuration dispatch={props.dispatch_date} arrive={props.arrival_date} seat={props.free_seat - props.purchased + "/" + props.free_seat}/>
                 <TicketDate date={props.arrival_date}/>
             </div>
-
-            <TicketOptions full_name={props.full_name} id={props.id}/>
         </div>
     );
 

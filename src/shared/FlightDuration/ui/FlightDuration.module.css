@@ -1,0 +1,11 @@
+.place{
+    @apply flex flex-col gap-3;
+}
+
+.seat{
+    @apply text-4xl;
+}
+
+.duration{
+    @apply text-gray-400;
+}
