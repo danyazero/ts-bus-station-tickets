@@ -1,0 +1,35 @@
+.passenger_card{
+    @apply flex flex-row justify-between p-3 rounded-2xl filter shadow items-center;
+}
+
+.passenger_info{
+    @apply flex flex-row gap-3;
+}
+
+.passenger_avatar{
+    @apply rounded-2xl w-16 h-16 flex justify-center items-center font-bold text-2xl text-white;
+}
+
+.info{
+    @apply flex flex-col gap-1 justify-center;
+}
+
+.full_name_id{
+    @apply flex flex-row gap-3 text-gray-400;
+}
+
+.full_name{
+    @apply font-bold text-black;
+}
+
+.other_info{
+    @apply flex flex-col justify-start text-gray-400 items-start leading-4 text-sm;
+}
+
+.checkbox{
+    @apply w-6 h-6 border-solid rounded-xl border-2 border-blue-900 p-0.5;
+}
+
+.check{
+    @apply w-full h-full rounded-lg bg-gray-400;
+}

@@ -2,6 +2,7 @@ import './App.css'
 import {Profile} from "./pages/Profile";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Home} from "./pages/Home";
+import {BookSeat} from "./pages/BookSeat";
 
 function App() {
     const router = createBrowserRouter([
@@ -12,6 +13,10 @@ function App() {
         {
             path: '/',
             element: <Home/>
+        },
+        {
+            path: '/book/:id',
+            element: <BookSeat/>
         }
     ]);
   return (

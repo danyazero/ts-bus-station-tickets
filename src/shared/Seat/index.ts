@@ -1,0 +1,1 @@
+export {Seat} from "./ui/Seat.tsx"

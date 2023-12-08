@@ -1,0 +1,1 @@
+export {BusSeats} from "./ui/BusSeats.tsx"
