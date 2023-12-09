@@ -1,6 +1,5 @@
 export interface IFlight {
     id: number,
-    flight_number: number,
     bus_class: string,
     bag_weight: number,
     bag_height: number,

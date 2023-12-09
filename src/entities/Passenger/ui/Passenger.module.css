@@ -1,5 +1,5 @@
 .passenger_card{
-    @apply flex flex-row justify-between p-3 rounded-2xl filter shadow items-center;
+    @apply flex flex-row justify-between p-3 rounded-2xl filter bg-white shadow items-center;
 }
 
 .passenger_info{
@@ -24,12 +24,4 @@
 
 .other_info{
     @apply flex flex-col justify-start text-gray-400 items-start leading-4 text-sm;
-}
-
-.checkbox{
-    @apply w-6 h-6 border-solid rounded-xl border-2 border-blue-900 p-0.5;
-}
-
-.check{
-    @apply w-full h-full rounded-lg bg-gray-400;
 }

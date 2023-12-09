@@ -1,27 +1,18 @@
 import st from "./Passenger.module.css"
 import {IPassenger} from "../model/interfaces.ts";
+import {useState} from "react";
+import {getFirstLetters} from "../model/getFirstLetters.ts";
+import {formatUkraineNumber} from "../model/formatUkraineNumber.ts";
+import {getRandomColor} from "../model/getRandomColor.ts";
+import {Checkbox} from "../../../shared/Checkbox";
 
 export const Passenger = (props: IPassenger & {checked: boolean, setPassenger(document_number: number): void}) => {
-
-    function getFirstLetters(full_name: string){
-        const full_name_array : string[] = full_name.split(" ")
-        return full_name_array[0][0] + full_name_array[1][0]
-    }
-
-    // function getRandomColor(): string {
-    //     const colors: string[] = ["#0bbe75", "#f19097", "#8e96a0", "#5438dc", "#e74e58"]
-    //     const random_num = Math.floor(Math.random() * 5);
-    //     return colors[random_num]
-    // }
-
-    function formatUkraineNumber(number: number){
-        return number.toString().replace(/^(\d{3})(\d{3})(\d{2})(\d{4})$/, '+$1 $2 $3 $4');
-    }
+    const [background, setBackground] = useState<string>(getRandomColor)
 
     return <>
         <div className={st.passenger_card}>
             <div className={st.passenger_info}>
-                <div className={st.passenger_avatar} style={{background: "#f19097"}}>
+                <div className={st.passenger_avatar} style={{background: background}}>
                     {getFirstLetters(props.full_name)}
                 </div>
                 <div className={st.info}>
@@ -35,9 +26,7 @@ export const Passenger = (props: IPassenger & {checked: boolean, setPassenger(do
                     </div>
                 </div>
             </div>
-            <div onClick={() => props.setPassenger(props.document_number)} className={st.checkbox}>
-                <div style={{background: props.checked ? "#1d3a8a" : "#9ca3af"}} className={st.check}></div>
-            </div>
+            <Checkbox checked={props.checked} setChecked={() => props.setPassenger(props.document_number)}/>
         </div>
     </>
 }
