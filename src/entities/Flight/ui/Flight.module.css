@@ -1,5 +1,5 @@
 .ticket{
-    @apply bg-white rounded-2xl mt-2 p-6;
+    @apply bg-white rounded-2xl mt-2 p-6 opacity-100 hover:opacity-75 transition-opacity;
 }
 .schedule{
     @apply flex flex-row justify-between mt-2 items-center;

@@ -2,9 +2,9 @@ import {BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title,
 import {Bar} from "react-chartjs-2";
 
 interface IHorizontalBar {
-    name: string,
+    name: string[],
     titles: string[],
-    values: number[]
+    values: number[][]
 }
 
 export function HorizontalBar(props: IHorizontalBar) {
@@ -34,18 +34,28 @@ export function HorizontalBar(props: IHorizontalBar) {
         },
     };
 
+    function getDatasetArray() {
+        let array = []
+        if (props.name.length == props.values.length) {
+            for (let i = 0; i < props.values.length; i++) {
+                let obj = {
+                        label: props.name[i],
+                        data:props.values[i],
+                        borderColor: 'rgb(30, 58, 138)',
+                        backgroundColor: 'rgba(30, 58, 138, 0.5)',
+                    }
+                array.push(obj)
+            }
+        }
+        console.log(array)
+        return array
+    }
+
     return (
         <div>
             {props.values && props.values.length > 0 ? <Bar data={{
                     labels: props.titles,
-                    datasets: [
-                        {
-                            label: props.name,
-                            data:props.values,
-                            borderColor: 'rgb(30, 58, 138)',
-                            backgroundColor: 'rgba(30, 58, 138, 0.5)',
-                        },
-                    ],
+                    datasets: getDatasetArray()
                 }} options={options}/>
                 : <div>Loading...</div>}
         </div>

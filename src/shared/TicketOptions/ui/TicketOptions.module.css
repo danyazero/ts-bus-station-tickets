@@ -7,7 +7,7 @@
 }
 
 .button{
-    @apply cursor-pointer;
+    @apply cursor-pointer opacity-60 hover:opacity-100 transition-opacity;
 }
 
 .price {

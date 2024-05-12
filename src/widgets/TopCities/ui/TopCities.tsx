@@ -14,7 +14,7 @@ export function TopCities() {
     return (
         <div>
             {!loading && data ?
-                <HorizontalBar name={"City"} titles={data.map(element => element.cityName)} values={data.map(element => element.count)}/>
+                <HorizontalBar name={["City"]} titles={data.map(element => element.cityName)} values={[data.map(element => element.count)]}/>
                 : <div>Loading...</div>}
         </div>
     );

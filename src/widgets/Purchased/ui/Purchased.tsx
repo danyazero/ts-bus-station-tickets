@@ -4,7 +4,8 @@ import {HorizontalBar} from "../../../entities/HorizontalBar/ui/HorizontalBar.ts
 
 export interface IPurchases {
     title: string,
-    count: number
+    count: number,
+    sum: number
 }
 
 export function Purchased() {
@@ -14,7 +15,9 @@ export function Purchased() {
     return (
         <div>
             {!loading && data ?
-                <HorizontalBar name={"City"} titles={data.map(element => element.title)} values={data.map(element => element.count)}/>
+                <HorizontalBar name={["Purchased"]}
+                               titles={data.map(element => element.title + ` (${element.count}pcs)`)}
+                               values={[data.map(element => element.sum)]}/>
                 : <div>Loading...</div>}
         </div>
     );

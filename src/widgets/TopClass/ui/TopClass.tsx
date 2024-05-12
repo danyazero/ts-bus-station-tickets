@@ -17,7 +17,7 @@ export function TopClass() {
     return (
         <div>
             {!loading && data && data.length > 0 ?
-                <HorizontalBar name={"Class"} titles={data.map(element => element.className)} values={data.map(element => element.count)}/>
+                <HorizontalBar name={["Class"]} titles={data.map(element => element.className)} values={[data.map(element => element.count)]}/>
                 : <div>Loading...</div>}
         </div>
     );
