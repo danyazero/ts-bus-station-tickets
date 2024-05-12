@@ -9,7 +9,7 @@ export const TicketHeader = (props: {flight_number: number, dispatch_city: strin
             <p className={st.places}>{props.dispatch_city + " ->"} {props.arrival_city}</p>
         </div>
         <div className={st.classContainer}>
-            {props.price && <p className={st.price}>{props.price}₴</p>}
+            {props.price && <p className={st.price}>{props.price.toFixed(2)}₴</p>}
             <div className={st.bus_class}>{props.bus_class}</div>
         </div>
     </div>

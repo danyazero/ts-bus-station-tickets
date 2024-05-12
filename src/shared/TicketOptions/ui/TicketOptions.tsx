@@ -9,7 +9,7 @@ export const TicketOptions = (props: {full_name: string, id: number, price?: num
             {/*<NavLink to={'/edit/ticket/' + props.id}>*/}
             {/*    <img src={edit} width={20} height={20} alt={"edit"}/>*/}
             {/*</NavLink>*/}
-            {props.price && <p className={st.price}>{props.price}₴</p>}
+            {props.price && <p className={st.price}>{props.price.toFixed(2)}₴</p>}
             <a className={st.button} onClick={() => axios.delete('http://192.168.0.218:8080/api/ticket/' + props.id, {withCredentials: true})}>
                 <img src={del} width={20} height={20} alt={"delete"}/>
             </a>

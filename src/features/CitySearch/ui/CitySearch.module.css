@@ -1,0 +1,15 @@
+.searchContainer {
+    @apply flex flex-row gap-3 h-fit;
+}
+
+.input {
+    @apply appearance-none outline-none border-0 bg-transparent text-2xl w-48;
+}
+
+.recommendation {
+    @apply text-base bg-blue-900 rounded-md px-4 py-1 text-white transition-opacity hover:opacity-75 cursor-copy;
+}
+
+.selected {
+    @apply opacity-75 cursor-not-allowed;
+}
