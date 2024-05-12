@@ -3,4 +3,5 @@ export interface IStation {
     city: string,
     dispatchDate: string,
     arrivalDate: string,
+    distance: number
 }

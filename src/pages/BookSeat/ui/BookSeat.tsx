@@ -36,7 +36,7 @@ export const BookSeat = () => {
 
     return <>
         <Flight {...data}/>
-        {id && <FlightStations id={Number(id)} setStations={setStations}/>}
+        {id && <FlightStations id={Number(id)} koef={data.pricePerKilometer} setStations={setStations}/>}
         <ChoosePassenger selected={passenger} setPassenger={setPassenger}/>
         <BusSeats flight_number={Number(id)} seats_max={data.freeSeat} setSeat={setSeat}/>
         <h2>Almost done...</h2>

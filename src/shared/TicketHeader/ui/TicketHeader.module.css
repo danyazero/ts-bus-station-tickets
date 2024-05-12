@@ -10,6 +10,14 @@
 
 }
 
+.classContainer {
+    @apply w-fit h-fit flex flex-row gap-1.5;
+}
+
+.price {
+    @apply text-green-600 text-xl font-bold;
+}
+
 .bus_class{
     @apply bg-blue-900 rounded-2xl text-white h-fit px-4 py-1;
 }

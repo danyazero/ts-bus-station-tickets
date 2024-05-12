@@ -11,7 +11,7 @@ export const Flight = (props: IFlight) => {
         <NavLink to={'/book/' + props.id}>
             <div className={st.ticket}>
                 <TicketHeader flight_number={props.id} dispatch_city={props.dispatchCity}
-                              arrival_city={props.arrivalCity} bus_class={props.busClass}/>
+                              arrival_city={props.arrivalCity} bus_class={props.busClass} price={props.price}/>
 
                 <div className={st.schedule}>
                     <TicketDate date={props.dispatchDate}/>

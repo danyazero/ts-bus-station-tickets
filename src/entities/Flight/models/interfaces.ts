@@ -10,5 +10,7 @@ export interface IFlight {
     dispatchCity: string,
     arrivalCity: string,
     dispatchDate: string,
-    arrivalDate: string
+    arrivalDate: string,
+    pricePerKilometer: number,
+    price: number
 }
