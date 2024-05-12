@@ -1,0 +1,7 @@
+.loginFormContainer {
+    @apply h-full w-full flex justify-center items-center;
+}
+
+.loginForm {
+    @apply w-fit h-fit flex flex-col gap-5;
+}

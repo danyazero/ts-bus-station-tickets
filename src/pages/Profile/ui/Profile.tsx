@@ -1,18 +1,19 @@
-import {useEffect, useState} from "react";
 import {ITicket} from "../../../entities/Ticket/models/interfaces.ts";
-import axios from "axios";
 import {Ticket} from "../../../entities/Ticket";
+import {GetDataHook} from "../../../features/requestHook";
 
 export const Profile = () => {
-    const [tickets, setTickets] = useState<ITicket[]>([])
+    // const [tickets, setTickets] = useState<ITicket[]>([])
 
-    useEffect(() => {
-        axios.get('http://localhost:8080/ticket').then((response: {data: ITicket[]}) => setTickets(response.data))
-    }, [])
+    // useEffect(() => {
+    //     axios.get('http://192.168.0.218:8080/api/ticket', {withCredentials: true}).then((response: {data: ITicket[]}) => setTickets(response.data)).catch(error => console.log(error.response.status))
+    // }, [])
 
+    const {data, loading, error} = GetDataHook<ITicket[]>('/ticket', 2, 300, true)
+    console.log(data)
     return (
         <>
-            {tickets.map((element, index) => <Ticket key={element.id + "_" + index} {...element}/>)}
+            {!loading && data ?  data.map((element, index) => <Ticket key={element.id + "_" + index} {...element}/>) : <div>Loading...</div>}
         </>
     );
 }

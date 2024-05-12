@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-row h-fit text-blue-200 font-medium w-[325px];
+}
+
+.prefix {
+  @apply rounded-l-2xl bg-blue-900 w-fit p-[13px];
+}
+
+.input {
+  @apply bg-blue-200 w-full border-y-[3px] text-[16px] pl-[13px] border-y-blue-900 border-l-0 border-r-[3px] border-r-blue-900 placeholder-blue-900 placeholder-opacity-50 outline-none shadow-none text-blue-900 border-solid font-[500] appearance-none rounded-r-2xl;
+}

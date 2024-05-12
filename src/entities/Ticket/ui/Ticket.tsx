@@ -9,16 +9,16 @@ export const Ticket = (props: ITicket) => {
 
     return (
         <div className={st.ticket}>
-            <TicketHeader flight_number={props.flight_number} dispatch_city={props.dispatch_city}
-                          arrival_city={props.arrival_city} bus_class={props.bus_class}/>
+            <TicketHeader flight_number={props.flightNumber} dispatch_city={props.dispatchCity}
+                          arrival_city={props.arrivalCity} bus_class={props.busClass}/>
 
             <div className={st.schedule}>
-                <TicketDate date={props.dispatch_date}/>
-                <FlightDuration dispatch={props.dispatch_date} arrive={props.arrival_date} seat={"P"+props.seat}/>
-                <TicketDate date={props.arrival_date}/>
+                <TicketDate date={props.dispatchDate}/>
+                <FlightDuration dispatch={props.dispatchDate} arrive={props.arrivalDate} seat={"P"+props.seat}/>
+                <TicketDate date={props.arrivalDate}/>
             </div>
 
-            <TicketOptions full_name={props.full_name} id={props.id}/>
+            <TicketOptions full_name={props.fullName} id={props.id} price={props.calculatedPrice}/>
         </div>
     );
 

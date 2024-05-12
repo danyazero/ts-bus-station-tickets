@@ -1,0 +1,1 @@
+export {GetDataHook} from "./utils/getDataHook"

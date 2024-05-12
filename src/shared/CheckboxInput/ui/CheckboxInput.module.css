@@ -1,0 +1,12 @@
+.container {
+    @apply flex flex-row h-fit items-center text-blue-900 font-medium gap-1.5;
+}
+
+.input {
+    background-clip: padding-box;
+    @apply w-[25px] h-[25px] bg-blue-200 border-solid border-[3px] border-blue-200 rounded-sm appearance-none;
+}
+
+.input:checked {
+    @apply bg-blue-900 bg-opacity-100 rounded-sm;
+}

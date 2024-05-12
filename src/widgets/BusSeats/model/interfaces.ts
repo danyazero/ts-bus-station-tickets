@@ -1,1 +1,1 @@
-export interface ISeat {seat: number, full_name: string}
+export interface ISeat {seat: number, fullName: string}

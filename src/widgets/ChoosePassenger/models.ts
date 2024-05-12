@@ -1,8 +1,8 @@
 export interface IPassenger{
-    document_number: number,
-    "full_name": string,
+    documentNumber: number,
+    "fullName": string,
     "birthday": string,
-    "document_end": string,
+    "documentEnd": string,
     "email": string,
-    "number": number
+    "phone": number
 }

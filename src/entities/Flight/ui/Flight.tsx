@@ -10,14 +10,14 @@ export const Flight = (props: IFlight) => {
     return (
         <NavLink to={'/book/' + props.id}>
             <div className={st.ticket}>
-                <TicketHeader flight_number={props.id} dispatch_city={props.dispatch_city}
-                              arrival_city={props.arrival_city} bus_class={props.bus_class}/>
+                <TicketHeader flight_number={props.id} dispatch_city={props.dispatchCity}
+                              arrival_city={props.arrivalCity} bus_class={props.busClass}/>
 
                 <div className={st.schedule}>
-                    <TicketDate date={props.dispatch_date}/>
-                    <FlightDuration dispatch={props.dispatch_date} arrive={props.arrival_date}
-                                    seat={props.free_seat - props.purchased + "/" + props.free_seat}/>
-                    <TicketDate date={props.arrival_date}/>
+                    <TicketDate date={props.dispatchDate}/>
+                    <FlightDuration dispatch={props.dispatchDate} arrive={props.arrivalDate}
+                                    seat={props.freeSeat - props.purchased + "/" + props.freeSeat}/>
+                    <TicketDate date={props.arrivalDate}/>
                 </div>
             </div>
         </NavLink>

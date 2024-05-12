@@ -13,20 +13,20 @@ export const Passenger = (props: IPassenger & {checked: boolean, setPassenger(do
         <div className={st.passenger_card}>
             <div className={st.passenger_info}>
                 <div className={st.passenger_avatar} style={{background: background}}>
-                    {getFirstLetters(props.full_name)}
+                    {getFirstLetters(props.fullName)}
                 </div>
                 <div className={st.info}>
                     <div className={st.full_name_id}>
-                        <p className={st.full_name}>{props.full_name}</p>
-                        <p>#{props.document_number}</p>
+                        <p className={st.full_name}>{props.fullName}</p>
+                        <p>#{props.documentNumber}</p>
                     </div>
                     <div className={st.other_info}>
                         <p>{props.email}</p>
-                        <p>{formatUkraineNumber(props.number)}</p>
+                        <p>{formatUkraineNumber(props.phone)}</p>
                     </div>
                 </div>
             </div>
-            <Checkbox checked={props.checked} setChecked={() => props.setPassenger(props.document_number)}/>
+            <Checkbox checked={props.checked} setChecked={() => props.setPassenger(props.documentNumber)}/>
         </div>
     </>
 }

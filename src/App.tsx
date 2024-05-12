@@ -4,6 +4,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {BookSeat} from "./pages/BookSeat";
 import {Menu} from "./widgets/Menu";
+import {Login} from "./pages/Login";
+import {Dashboard} from "./pages/Dashboard";
 
 function App() {
     const router = createBrowserRouter([
@@ -22,6 +24,14 @@ function App() {
                 {
                     path: 'book/:id',
                     element: <BookSeat/>
+                },
+                {
+                    path: 'login',
+                    element: <Login/>
+                },
+                {
+                    path: 'dashboard',
+                    element: <Dashboard/>
                 }
             ]
         }

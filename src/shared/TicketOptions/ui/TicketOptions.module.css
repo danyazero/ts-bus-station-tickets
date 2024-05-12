@@ -1,11 +1,15 @@
 .info{
-    @apply flex flex-row justify-between mt-6;
+    @apply flex flex-row items-center justify-between mt-6;
 }
 
 .other{
-    @apply flex flex-row gap-3;
+    @apply flex flex-row gap-3 items-center;
 }
 
 .button{
     @apply cursor-pointer;
+}
+
+.price {
+    @apply text-2xl font-bold text-blue-900;
 }
