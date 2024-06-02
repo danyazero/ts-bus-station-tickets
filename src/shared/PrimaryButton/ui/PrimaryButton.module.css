@@ -1,5 +1,5 @@
 .primaryButton {
-  @apply py-[12px] relative bg-blue-900 text-white rounded-2xl appearance-none border-none outline-none text-[16px] cursor-pointer font-medium;
+  @apply py-[12px] w-full relative bg-blue-900 text-white rounded-2xl appearance-none border-none outline-none text-[16px] cursor-pointer font-medium;
 }
 
 .primaryButton:hover {

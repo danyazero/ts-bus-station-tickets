@@ -25,10 +25,20 @@ export function FlightFilter(props: {setData(data: IFlight[]): void}) {
 
 
     return (
-        <form className={st.form} onSubmit={onSubmit}>
-            <CitySearch placeholder={"Dispatch city"} setValue={setDispatchCity}/>
-            <CitySearch placeholder={"Arrive city"} setValue={setArriveCity}/>
-            <button disabled={dispatchCity == 0 && arriveCity == 0} className={st.searchButton} type={"submit"}>Search</button>
-        </form>
+        <div>
+            <div className={st.container}>
+                <div className={st.steps}>
+
+                </div>
+            </div>
+            <form className={st.form} onSubmit={onSubmit}>
+                <CitySearch placeholder={"Dispatch city"} setValue={setDispatchCity}/>
+                <CitySearch placeholder={"Arrive city"} setValue={setArriveCity}/>
+                <button disabled={dispatchCity == 0 && arriveCity == 0} className={st.searchButton}
+                        type={"submit"}>Search
+                </button>
+            </form>
+        </div>
+
     );
 }

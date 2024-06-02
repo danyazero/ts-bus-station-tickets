@@ -1,0 +1,7 @@
+.container {
+    @apply flex flex-col items-start w-fit;
+}
+
+.label {
+    @apply ml-2 mb-1.5 opacity-50
+}

@@ -2,6 +2,14 @@
     @apply flex flex-col gap-4 bg-white rounded-2xl mt-2 p-6;
 }
 
+.container {
+    @apply min-w-[35px] min-h-full flex justify-center items-center content-center mr-[10px];
+}
+
+.steps {
+    @apply flex flex-col justify-between w-[2px] bg-blue-900 h-[75%] items-center ;
+}
+
 .searchButton {
     @apply text-2xl bg-blue-900 rounded-2xl py-2 text-white appearance-none border-none disabled:opacity-50 disabled:cursor-not-allowed;
 }

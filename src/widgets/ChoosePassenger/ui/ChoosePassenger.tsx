@@ -2,10 +2,8 @@ import {useEffect} from "react";
 import {IPassenger} from "../models.ts";
 import {Passenger} from "../../../entities/Passenger";
 import st from "./ChoosePassenger.module.css"
-import useSWR from "swr";
-import {fetcher} from "../../../api.ts";
 import {GetDataHook} from "../../../features/requestHook";
-import {IFlight} from "../../../entities/Flight/models/interfaces.ts";
+import {AddPassenger} from "../../AddPassenger";
 
 export const ChoosePassenger = (props: {selected: number, setPassenger(document_number: number): void}) => {
     // const { data: passengers, isLoading }:{data: IPassenger[], isLoading: boolean} = useSWR('http://192.168.0.218:8080/api/passenger', fetcher)
@@ -22,6 +20,7 @@ export const ChoosePassenger = (props: {selected: number, setPassenger(document_
                            documentNumber={element.documentNumber} email={element.email}
                            phone={element.phone} checked={element.documentNumber == props.selected}
                            setPassenger={props.setPassenger}/>)}
+            <AddPassenger/>
         </div>
     </>
 }

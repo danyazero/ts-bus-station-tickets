@@ -40,7 +40,7 @@ export function HorizontalBar(props: IHorizontalBar) {
             for (let i = 0; i < props.values.length; i++) {
                 let obj = {
                         label: props.name[i],
-                        data:props.values[i],
+                        data: props.values[i],
                         borderColor: 'rgb(30, 58, 138)',
                         backgroundColor: 'rgba(30, 58, 138, 0.5)',
                     }

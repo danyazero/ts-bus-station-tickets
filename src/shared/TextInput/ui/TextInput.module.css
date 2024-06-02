@@ -1,0 +1,4 @@
+
+.input {
+  @apply bg-blue-200 w-56 border-y-[3px] px-3.5 py-2.5 font-medium text-[16px] border-blue-900 border-x-[3px] placeholder-blue-900 placeholder-opacity-50 outline-none shadow-none text-blue-900 border-solid appearance-none rounded-2xl;
+}
